@@ -6,6 +6,12 @@
 int main()
 {
     std::filesystem::path inputPath("../input");
+    std::filesystem::path outPath("../out");
+    
+    if (!std::filesystem::exists(outPath))
+    {
+        std::filesystem::create_directory(outPath);
+    }
 
     for (const auto& entry : std::filesystem::directory_iterator(inputPath))
     {
