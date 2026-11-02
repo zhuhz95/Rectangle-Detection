@@ -6,7 +6,6 @@
 #include <filesystem>
 #include <opencv2/opencv.hpp>
 #include <vector>
-
 std::vector<std::vector<cv::Point>> detectRectangles(const cv::Mat& src);
 
 #endif

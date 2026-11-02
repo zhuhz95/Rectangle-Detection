@@ -1,5 +1,4 @@
 #include "test2.h"
-#include <opencv2/opencv.hpp>
 
 std::vector<std::vector<cv::Point>> detectRectangles(const cv::Mat& src)
 {

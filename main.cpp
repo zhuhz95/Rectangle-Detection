@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-#include <filesystem>
 #include "test2.h"
 
 int main()
