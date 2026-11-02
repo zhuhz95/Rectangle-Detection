@@ -29,3 +29,13 @@ std::vector<std::vector<cv::Point>> detectRectangles(const cv::Mat& src)
     }
     return result;
 }
+
+void drawAndSaveRect(const cv::Mat& src, const std::vector<std::vector<cv::Point>>& rectList, const std::string& outFilePath)
+{
+    cv::Mat drawImg = src.clone();
+    for(const auto& rectPts : rectList)
+    {
+        cv::polylines(drawImg, rectPts, true, cv::Scalar(0,255,0), 2);
+    }
+    cv::imwrite(outFilePath, drawImg);
+}

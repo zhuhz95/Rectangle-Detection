@@ -7,5 +7,6 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 std::vector<std::vector<cv::Point>> detectRectangles(const cv::Mat& src);
+void drawAndSaveRect(const cv::Mat& src, const std::vector<std::vector<cv::Point>>& rectList, const std::string& outFilePath);
 
 #endif

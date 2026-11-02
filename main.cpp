@@ -24,6 +24,9 @@ int main()
 
         std::vector<std::vector<cv::Point>> rectList = detectRectangles(src);
         int imgHeight = src.rows;
+        
+        std::string outFile = (outPath / fileName).string();
+        drawAndSaveRect(src, rectList, outFile);
 
         std::cout << fileName << ":";
         if (rectList.empty())
